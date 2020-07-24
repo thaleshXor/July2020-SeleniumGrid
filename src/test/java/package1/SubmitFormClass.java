@@ -5,6 +5,7 @@ import java.net.URL;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -106,6 +107,7 @@ void setUp() throws MalformedURLException {
 		}
 	
 	driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+	driver.manage().timeouts().pageLoadTimeout(20, TimeUnit.SECONDS);
 				
     }	
 
