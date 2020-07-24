@@ -59,8 +59,8 @@ public class SubmitFormClass {
 	private static String xpath_Submit="//button[@name='submit']";
 	
 	//String osName=System.getProperty("osName");
-	//String browser=System.getProperty("browser");
-	String browser="chrome";
+	String browser=System.getProperty("browser");
+	//String browser="chrome";
 	
 	//	String url="http://localhost:4444/wd/hub";
 	//String url="http://10.52.122.67:4444/wd/hub";
@@ -93,7 +93,9 @@ void setUp() throws MalformedURLException {
 		}
 		else if(browser.equalsIgnoreCase("firefox")) {
 			dc.setBrowserName("firefox");
+			System.out.println("About to generate firefox options");
 			FirefoxOptions options = new FirefoxOptions();
+			System.out.println("going to run on headless firefox");
 			options.addArguments("-headless");
 			options.addArguments("--no-sandbox");
 			options.addArguments("--disable-dev-shm-usage");
