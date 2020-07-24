@@ -95,10 +95,12 @@ void setUp() throws MalformedURLException {
 			dc.setBrowserName("firefox");
 			System.out.println("About to generate firefox options");
 			FirefoxOptions options = new FirefoxOptions();
+			/*
 			System.out.println("going to run on headless firefox");
 			options.addArguments("-headless");
 			options.addArguments("--no-sandbox");
 			options.addArguments("--disable-dev-shm-usage");
+			*/
 			options.merge(dc);
 			driver=new RemoteWebDriver(new URL(url), options);
 		}
