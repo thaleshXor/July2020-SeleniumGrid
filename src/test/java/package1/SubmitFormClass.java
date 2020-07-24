@@ -104,6 +104,8 @@ void setUp() throws MalformedURLException {
 			options.merge(dc);
 			driver=new RemoteWebDriver(new URL(url), options);
 		}
+	
+	driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 				
     }	
 
